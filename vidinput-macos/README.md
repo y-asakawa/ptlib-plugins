@@ -1,13 +1,47 @@
-## PTLib
+# PTLib vidinput_macos Plugin
 
-This is a fork of PTLib 2.10.9 to keep a stable API for the H323Plus library and the GNU Gatekeeper. The main PTLib development branch makes substantial API changes with every version, while this branch keeps the API stable and only makes compatible changes wherever possible.
+macOS AVFoundation video capture plugin for PTLib.
 
-This fork is actively maintained to fix bugs and security issues.
+## Overview
 
-License: MPL
+This plugin provides native macOS camera support for PTLib-based applications using AVFoundation framework.
 
-H323Plus: https://www.h323plus.org
+## Features
 
-GNU Gatekeeper: https://www.gnugk.org
+- Native AVFoundation video capture
+- Support for FaceTime HD Camera and external USB cameras
+- Frame rate control (up to 30fps)
+- Multiple resolution support (CIF, QCIF, 4CIF, etc.)
+- Automatic format conversion (NV12/UYVY → YUV420P)
 
-Support: https://www.willamowius.com
+## Files
+
+- `vidinput_macos.h` - Header file with class definitions
+- `vidinput_macos.mm` - Objective-C++ implementation
+- `Makefile` - Build configuration
+
+## Building
+
+```bash
+make
+```
+
+## Dependencies
+
+- macOS 10.13+
+- Xcode Command Line Tools
+- PTLib library
+- AVFoundation.framework
+- CoreMedia.framework
+- CoreVideo.framework
+
+## Modifications
+
+This version includes:
+- Enhanced frame grabbing with proper synchronization
+- Buffer management optimizations
+- Compatibility fixes for modern macOS versions
+
+## License
+
+MPL 1.0 (same as PTLib)
