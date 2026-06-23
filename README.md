@@ -1,4 +1,4 @@
-# PTLib Plugins
+# PTLib Plugins for macOS(linux)
 
 External PTLib plugins maintained in this repository.
 
