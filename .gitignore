@@ -1,1 +1,19 @@
+# macOS local metadata
 .DS_Store
+**/.DS_Store
+
+# Local editor/workspace files
+*.code-workspace
+.vscode/
+
+# Build outputs
+*.dylib
+*.so
+*.bundle
+*.o
+*.a
+*.dSYM/
+
+# Local logs and temporary files
+*.log
+*.tmp

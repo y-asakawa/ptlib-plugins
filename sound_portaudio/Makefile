@@ -19,4 +19,6 @@ ifeq ($(shell uname),Darwin)
 LDSOPTS = -bundle -undefined dynamic_lookup
 endif
 
-include ../../make/plugins.mak
+PTLIB_MAKE_DIR ?= ../../make
+
+include $(PTLIB_MAKE_DIR)/plugins.mak

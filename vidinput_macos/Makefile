@@ -10,12 +10,15 @@ SRC = vidinput_macos.mm
 # ヘッダーファイル
 HDR = vidinput_macos.h
 
-# インストールディレクトリ（必要に応じて変更）
-PTLIB_PLUGIN_DIR = /path/to/ptlib
+# PTLib のインストール先。ローカル環境に合わせて make 実行時に上書きしてください。
+# 例: make PTLIB_DIR=/opt/ptlib
+PTLIB_DIR ?= /usr/local
+PTLIB_LIB_DIR ?= $(PTLIB_DIR)/lib
+PTLIB_PLUGIN_DIR ?= $(PTLIB_LIB_DIR)
 
 # PTLib, AVFoundation などの必要なヘッダーとライブラリのパス
-PTLIB_INC = -I/path/to/ptlib
-PTLIB_LIB = -L/path/to/ptlib
+PTLIB_INC ?= -I$(PTLIB_DIR)/include
+PTLIB_LIB ?= -L$(PTLIB_LIB_DIR)
 
 # macOS のフレームワーク（Foundation を追加）
 MACOS_FRAMEWORKS = -framework AVFoundation -framework CoreMedia -framework CoreVideo -framework Foundation -framework CoreGraphics -framework AppKit
