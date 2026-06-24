@@ -20,3 +20,5 @@ When reporting, include:
 ## Scope
 
 Security reports should focus on vulnerabilities in this repository's plugin code and build files. Issues in PTLib, PortAudio, macOS frameworks, or other upstream dependencies should also be reported to the relevant upstream project.
+
+Video frames, audio samples, device metadata, and device-change notifications must be treated as untrusted input.

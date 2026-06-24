@@ -1,13 +1,13 @@
-# PTLib Plugins for macOS(linux)
+# External PTLib Plugins
 
 External PTLib plugins maintained in this repository.
 
 ## Plugins
 
-| Directory | Plugin | Purpose |
-| --- | --- | --- |
-| `vidinput_macos/` | `vidinput_macos` | macOS video input plugin using AVFoundation. |
-| `sound_portaudio/` | `PortAudio` | PTLib sound channel plugin using PortAudio. |
+| Directory | Plugin | Platform | Purpose |
+| --- | --- | --- | --- |
+| `vidinput_macos/` | `vidinput_macos` | macOS | AVFoundation video input |
+| `sound_portaudio/` | `PortAudio` | macOS/Linux | PortAudio sound channel |
 
 ## Requirements
 
@@ -47,7 +47,18 @@ The repository tracks source code, Makefiles, and project documentation only. Lo
 
 ## License
 
-This project is licensed under the Mozilla Public License 1.0. See [LICENSE](LICENSE).
+The plugin source maintained in this repository is distributed under the
+Mozilla Public License 1.0, except where an individual source file states
+otherwise.
+
+PortAudio is an external build and runtime dependency and remains under its
+own license. See [LICENSE](LICENSE),
+[THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md),
+[LICENSES/PortAudio-license.txt](LICENSES/PortAudio-license.txt), and the
+source-file headers.
+
+Local modifications and source-origin notes are recorded in
+[CHANGES.md](CHANGES.md).
 
 ## Security
 
